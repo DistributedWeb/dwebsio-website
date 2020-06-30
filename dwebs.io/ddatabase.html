@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+
+    
+<!-- Mirrored from dwebs.io/ddatabase.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 May 2020 17:41:23 GMT -->
+<head>
+        <meta charset="utf-8">
+        <title>dDatabase Components | dWeb | The Distributed Web Protocol</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="dDatabase's core components and modules that bring dWeb's distributed database framework for distributed applications to life.">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500" rel="stylesheet">
+        <link href="assets/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="assets/css/entypo.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="assets/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    </head>
+
+    <body>
+
+      <div class="nav-container">
+          <div class="bg-white navbar-light" data-sticky="top">
+              <div class="container">
+                  <nav class="row navbar navbar-expand-lg align-items-center">
+                      <div class="col-12 col-lg-auto order-lg-2 d-flex justify-content-between">
+                          <a class="navbar-brand m-0" href="index-2.html">
+                              <img alt="dWeb" height="50px" src="assets/img/logo-dark-gray.png" />
+                          </a>
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-toggle" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                              <i class="icon-menu h4"></i>
+                          </button>
+                      </div>
+                      <!--end of col-->
+                      <div class="col-12 col-lg order-lg-1">
+                          <div class="collapse navbar-collapse navbar-toggle">
+                              <ul class="navbar-nav">
+                                  <li class="nav-item">
+                                      <a href="index-2.html" class="nav-link">Home</a>
+                                  </li>
+
+                                  <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">For Beginners</a>
+                                      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+
+                                        <a class="dropdown-item gray-menu" href="getting-started.html">
+                                            <span class="h6 mb-0">How To Get Started</span>
+                                            <p class="text-small gray-menu d-none d-lg-block d-xl-block">Learn how to get started using the dWeb.</p>
+                                            <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                        </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+
+                                          <a class="dropdown-item gray-menu" href="web2-vs-web3.html">
+                                              <span class="h6 mb-0">Web 2.0 vs. Web 3.0</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">An important comparison for new users.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="introducing-dsites.html">
+                                              <span class="h6 mb-0">Introducing dSites</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">Distributed websites are the future and anyone can build them.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="https://distdns.io/">
+                                              <span class="h6 mb-0">Introducing dDNS and dTLDs</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">Taking back the web for the people, with a new domain name system.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="dweb-plus-blockchains.html">
+                                              <span class="h6 mb-0">dWeb + Blockchains</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">dWeb doesn't require a blockchain but can be integrated with them.</p>
+                                              <p class="text-small gray-menu  d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+
+                                      </div>
+                                  </li>
+
+                                  <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">Components</a>
+                                      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+
+                                        <a class="dropdown-item gray-menu" href="dweb-core.html">
+                                            <span class="h6 mb-0">dWeb Core</span>
+                                            <p class="text-small gray-menu d-none d-lg-block d-xl-block">dWeb's Core Components.</p>
+                                            <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                        </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+
+                                          <a class="dropdown-item gray-menu" href="ddns.html">
+                                              <span class="h6 mb-0">dDNS</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">Libraries associated with dWeb's distributed DNS.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="dpack.html">
+                                              <span class="h6 mb-0">dPack</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">dPack's core libraries for dWeb vaults, pinning services and more.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="ddatabase.html">
+                                              <span class="h6 mb-0">dDatabases</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">Distributed database libraries for dDatabase, dAppDB and dSiteDB.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="ddrives.html">
+                                              <span class="h6 mb-0">dDrives</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">Core libraries for dDrives.</p>
+                                              <p class="text-small gray-menu  d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="dwdht.html">
+                                              <span class="h6 mb-0">DWDHT</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">dWeb's DHT libraries for interacting with BitTorrent's network.</p>
+                                              <p class="text-small gray-menu  d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+
+                                          <a class="dropdown-item gray-menu" href="flockcore.html">
+                                              <span class="h6 mb-0">Flockcore</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">dWeb's core flocking libraries for p2p networking.</p>
+                                              <p class="text-small gray-menu  d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+
+                                          <a class="dropdown-item gray-menu" href="ddrives.html">
+                                              <span class="h6 mb-0">dBrowser</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">Collection of dBrowser's core libraries.</p>
+                                              <p class="text-small gray-menu  d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                      </div>
+                                  </li>
+
+                                  <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">For Developers</a>
+                                      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+
+                                        <a class="dropdown-item gray-menu" href="https://go.dwebuniversity.com/v0.20.5/docs/getting-started-with-the-dweb">
+                                            <span class="h6 mb-0">dWeb Documentation</span>
+                                            <p class="text-small gray-menu d-none d-lg-block d-xl-block">dWeb's official developer documentation.</p>
+                                            <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                        </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+
+                                          <a class="dropdown-item gray-menu" href="https://go.dwebuniversity.com/v0.20.5/docs/dbrowser-introduction">
+                                              <span class="h6 mb-0">dBrowser Documentation</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">dBrowser's official developer documentation.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="https://go.dwebuniversity.com/v0.20.5/docs/how-to-create-dsites">
+                                              <span class="h6 mb-0">How To Create dSites</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">Learn how to create dSites for the dWeb.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="https://go.dwebuniversity.com/v0.20.5/docs/how-to-create-dapps">
+                                              <span class="h6 mb-0">How To Create dApps</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">Learn how to create blockchain-less dApps on the dWeb.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+                                          <div class="dropdown-divider d-none d-lg-block d-xl-block"></div>
+                                          <a class="dropdown-item gray-menu" href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-for-developers">
+                                              <span class="h6 mb-0">How To Use dDatabases</span>
+                                              <p class="text-small gray-menu d-none d-lg-block d-xl-block">Learn how to incorporate dDatabases into your next blockchain-less dApp.</p>
+                                              <p class="text-small gray-menu d-lg-none d-xl-none">------------------------------------------------------------</p>
+                                          </a>
+
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <!--end of col-->
+                      <div class="col-12 col-lg order-lg-3">
+                          <div class="collapse navbar-collapse navbar-toggle justify-content-end">
+
+                              <ul class="navbar-nav">
+                                  <li class="nav-item">
+                                      <a class="btn btn-danger btn-lg" href="https://dbrowser.io/">Download dBrowser</a>
+                                      <span></span><a  class="btn btn-outline-dark btn-lg" href="https://distdns.io/">Install dDNS</a>
+                                  </li>
+                              </ul>
+
+                          </div>
+                      </div>
+                      <!--end of col-->
+                  </nav>
+                  <!--end of row-->
+              </div>
+              <!--end of container-->
+          </div>
+      </div>
+      <div class="main-container">
+
+            <nav aria-label="breadcrumb" role="navigation" class="text-white position-absolute">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="dweb-core.html">Components</a>
+                                </li>
+
+
+
+                                <li class="breadcrumb-item active" aria-current="page">dDatabase</li>
+                            </ol>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </nav>
+            <section class="bg-primary text-light p-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="space-lg pb-0">
+                                <h1 class="display-4">dDatabase</h1>
+                                <span class="lead">
+                                    dDatabase's core components and modules that bring dWeb's distributed database framework for distributed applications to life.
+                                </span>
+                            </div>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+                <svg class="decorative-divider" preserveAspectRatio="none" viewBox="0 0 100 100">
+                    <polygon fill="#F8F9FB" points="0 100 100 100 100 0"></polygon>
+                </svg>
+            </section>
+            <!--end of section-->
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-2 mb-5">
+                            <nav class="nav flex-md-column">
+                                <a href="dweb-core.html" class="nav-link">dWeb Core Components </a>
+                            </nav>
+                            <hr class="short">
+                            <nav class="nav flex-md-column mb-2">
+
+
+                                <a href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-core" class="nav-link">dDatabase Core</a>
+
+
+                                <a href="https://go.dwebuniversity.com/v0.20.5/docs/dsitedb-guide" class="nav-link">dSiteDB Core</a>
+
+
+                                <a href="https://go.dwebuniversity.com/v0.20.5/docs/dappdb-guide" class="nav-link">dAppDB Core</a>
+
+
+                                <a href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-protocol-buffers" class="nav-link">Protocol Buffers</a>
+
+
+                                <a href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-cryptography" class="nav-link">Cryptography</a>
+
+
+                                <a href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-daemon" class="nav-link">Daemon</a>
+
+
+                                <a href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-vaultr" class="nav-link">Vaultr</a>
+
+
+                                <a href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-tree-storage" class="nav-link">Tree Storage</a>
+
+
+                            </nav>
+
+                        </div>
+                        <!--end of col-->
+                        <div class="col-12 col-md-8">
+
+                            <article id="scss-method">
+                                <h3>
+                                    <p>dDatabase's Distributed Database Components & Libraries</p>
+                                </h3>
+                                <div>
+                                    <p>Blockchains are not the only way to create dApps, when distributed and decentralized data is the use case. dDatabase's framework brings to life 3 different types of distributed databases, to power dApps like <a href="https://dstatus.io/">dStatus</a> and <a href="https://dstatus.io/">dPress</a>.</p>
+
+                                </div>
+                            </article>
+
+                            <article id="scss-method">
+                                <h3>
+                                    <p>dDatabase Core</p>
+                                </h3>
+                                <div>
+                                    <p>Distributed and immutable database framework for the distributed web.</p>
+                                    <a class="btn btn-outline-dark btn-lg" href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-core">dDatabase Core Documentation</a>
+                                </div>
+                            </article>
+
+                            <article id="scss-method">
+                                <h3>
+                                    <p>dSiteDB</p>
+                                </h3>
+                                <div>
+                                    <p>A distributed database that reads and writes records on dweb:// websites..</p>
+                                      <a class="btn btn-outline-dark btn-lg" href="https://go.dwebuniversity.com/v0.20.5/docs/dsitedb-guide">dSiteDB Documentation</a>
+
+                                </div>
+                            </article>
+
+                            <article id="scss-method">
+                                <h3>
+                                    <p>dAppDB</p>
+                                </h3>
+                                <div>
+                                    <p>DappDB is a scalable peer-to-peer key-value database for the distributed web protocol (dweb://) and other distributed web protocols.</p>
+                                    <a class="btn btn-outline-dark btn-lg" href="https://go.dwebuniversity.com/v0.20.5/docs/dappdb-guide">dAppDB Documentation</a>
+                                </div>
+                            </article>
+
+                            <article id="scss-method">
+                                <h3>
+                                    <p>dDatabase Protocol Buffers</p>
+                                </h3>
+                                <div>
+                                    <p>dDatabase's protocol stream library.</p>
+                                      <a class="btn btn-outline-dark btn-lg" href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-protocol-buffers">dDatabase Protocol Buffers Documentation</a>
+
+                                </div>
+                            </article>
+                            <article id="scss-method">
+                                <h3>
+                                    <p>dDatabase Cryptography</p>
+                                </h3>
+                                <div>
+                                    <p>dDatabase cryptography library for dDatabase keys.</p>
+                                      <a class="btn btn-outline-dark btn-lg" href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-cryptography">dDatabase Cryptography Documentation</a>
+
+                                </div>
+                            </article>
+                            <article id="scss-method">
+                                <h3>
+                                    <p>dDatabase Daemon</p>
+                                </h3>
+                                <div>
+                                    <p>dDatabase daemon for sharing multiple dDrives and dDatabases at once.</p>
+                                      <a class="btn btn-outline-dark btn-lg" href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-daemon">dDatabase Daemon Documentation</a>
+
+                                </div>
+                            </article>
+                            <article id="scss-method">
+                                <h3>
+                                    <p>dDatabase Vaultr</p>
+                                </h3>
+                                <div>
+                                    <p>Library For Creating and Managing dDatabase and dDrive Vaults.</p>
+                                      <a class="btn btn-outline-dark btn-lg" href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-vaultr">dDatabase Vaultr Documentation</a>
+
+                                </div>
+                            </article>
+                            <article id="scss-method">
+                                <h3>
+                                    <p>dDatabase Tree Storage</p>
+                                </h3>
+                                <div>
+                                    <p>A module that stores dDatabase metadata trees using a storage provider.</p>
+                                      <a class="btn btn-outline-dark btn-lg" href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-tree-storage">dDatabase Tree Storage Documentation</a>
+
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <!--end of section-->
+            <section class="bg-dark p-0 text-white">
+                <svg class="decorative-divider" preserveAspectRatio="none" viewBox=" 0 0 100 100">
+                    <polygon fill="#F8F9FB" points="0 0 100 0 100 100"></polygon>
+                </svg>
+                <div class="container space-lg">
+                    <div class="row text-center">
+                        <div class="col">
+                            <h3 class="h1">Get started using dWeb</h3>
+                            <a href="getting-started.html" class="btn btn-lg btn-light">Read The Getting Started Guide</a>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <!--end of section-->
+            <footer class="bg-gray text-light footer-long">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <img alt="Image" height="40px" src="assets/img/logo-white.svg" class="mb-4" />
+                            <p class="text-muted">
+                                &copy; 2018 The Distributed Web Community.
+                                The Distributed Web Community is not a company. dWeb is not a company either.
+                                The Distributed Web Community is a global community of users and dWeb is a protocol.
+                                dWeb's protocol is a global church mission created by Arisen Church and carried out by Arisen Church missionaries.
+                            </p>
+                        </div>
+                        <!--end of col-->
+                        <div class="col-12 col-md-9">
+                            <span class="h5">1776 has commenced again. We've come for our freedom.</span>
+                            <div class="row no-gutters">
+                                <div class="col-6 col-lg-3">
+                                    <h6>For Beginners</h6>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="getting-started.html">How To Get Started</a>
+                                        </li>
+                                        <li>
+                                            <a href="web2-vs-web3.html">Web 2.0 vs 3.0</a>
+                                        </li>
+                                        <li>
+                                            <a href="dweb-plus-blockchains.html">dWeb & Blockchains</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://go.dwebuniversity.com/docs/dweb-introduction">dWeb Beginner Documentation</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end of col-->
+                                <div class="col-6 col-lg-3">
+                                    <h6>For Developers</h6>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="https://go.dwebuniversity.com/">dWeb Documentation</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://go.dwebuniversity.com/v0.20.5/docs/how-to-create-dsites">How To Build dSites</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://go.dwebuniversity.com/v0.20.5/docs/how-to-create-dapps">How To Build dApps</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://go.dwebuniversity.com/v0.20.5/docs/ddatabase-for-developers">Working With dDatabases</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end of col-->
+                                <div class="col-6 col-lg-3">
+                                    <h6>dWeb Components</h6>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="dweb-core.html">dWeb Core</a>
+                                        </li>
+                                        <li>
+                                            <a href="dpack.html">dPacks</a>
+                                        </li>
+                                        <li>
+                                            <a href="ddatabase.html">dDatabases</a>
+                                        </li>
+                                        <li>
+                                            <a href="flockcore.html">FlockCore</a>
+                                        </li>
+                                        <li>
+                                            <a href="distdns.html">DistDNS</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end of col-->
+                                <div class="col-6 col-lg-3">
+                                    <h6>Follow Us!</h6>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="https://dsocial.io/@dweb">dWeb on dSocial</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://steemit.com/@dweb">dWeb on Steemit</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/@distributedweb">dWeb on Twitter</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://facebook.com/distributedweb">dWeb on Facebook</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end of col-->
+                            </div>
+                            <!--end of row-->
+                        </div>
+                        <!--end of col-->
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </footer>
+        </div>
+
+
+
+
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.smartWizard.min.js"></script>
+        <script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+        <script type="text/javascript" src="assets/js/scrollMonitor.js"></script>
+        <script type="text/javascript" src="assets/js/smooth-scroll.polyfills.js"></script>
+        <script type="text/javascript" src="assets/js/prism.js"></script>
+        <script type="text/javascript" src="assets/js/zoom.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/js/theme.js"></script>
+
+    </body>
+
+
+<!-- Mirrored from dwebs.io/ddatabase.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 May 2020 17:41:23 GMT -->
+</html>
